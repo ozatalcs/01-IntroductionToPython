@@ -11,7 +11,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 
 ########################################################################
 #
-# TODO: 2.
+# Done: 2.
 #   Write code that accomplishes the following (and ONLY the following),
 #   in the order listed:
 #
@@ -44,6 +44,15 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 #
 ########################################################################
 import rosegraphics as rg
-window = rg.TurtleWindow
+window = rg.TurtleWindow()
 blue = rg.SimpleTurtle()
-blue.pen = rg.Pen('blue')
+blue.pen = rg.Pen('blue', 5)
+blue.left(90)
+blue.forward(200)
+blue.pen_up()
+blue.go_to(rg.Point(100, -40))
+blue.pen_down()
+blue.pen = rg.Pen('green', 10)
+blue.right(180)
+blue.forward(150)
+window.close_on_mouse_click()
